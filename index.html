@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Soluciones Web para Creadoras</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --bg:#0b0b14;
+  --card:#151526;
+  --primary:#9b87f5;
+  --secondary:#ff9fd6;
+  --text:#ffffff;
+  --muted:#b5b5d6;
+}
+
+*{
+  box-sizing:border-box;
+  font-family:"Segoe UI",sans-serif;
+}
+
+body{
+  margin:0;
+  background:linear-gradient(135deg,var(--bg),#12122a);
+  color:var(--text);
+}
+
+section{
+  padding:80px 20px;
+}
+
+h1,h2,h3{
+  margin-top:0;
+}
+
+.hero{
+  text-align:center;
+  padding-top:120px;
+  animation:fadeIn 1.2s ease;
+}
+
+.hero h1{
+  font-size:2.6rem;
+}
+
+.hero p{
+  max-width:700px;
+  margin:20px auto;
+  color:var(--muted);
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(30px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+.btn{
+  display:inline-block;
+  padding:16px 32px;
+  border-radius:14px;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#000;
+  font-weight:700;
+  text-decoration:none;
+  transition:transform .2s ease;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  margin-top:50px;
+}
+
+.card{
+  background:var(--card);
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+  transition:transform .3s ease;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.card h3{
+  color:var(--primary);
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+
+.mock{
+  border-radius:20px;
+  overflow:hidden;
+  background:#000;
+  animation:float 5s ease-in-out infinite;
+}
+
+.mock img{
+  width:100%;
+  display:block;
+}
+
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+  100%{transform:translateY(0);}
+}
+
+.notice{
+  background:#0f0f1f;
+  border-left:4px solid var(--primary);
+  padding:20px;
+  border-radius:12px;
+  color:var(--muted);
+}
+
+footer{
+  text-align:center;
+  padding:40px 20px;
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* BOTÓN IDIOMA */
+.lang-switch{
+  position:fixed;
+  top:20px;
+  right:20px;
+  z-index:999;
+}
+
+.lang-switch button{
+  background:#151526;
+  color:white;
+  border:1px solid #9b87f5;
+  padding:6px 12px;
+  margin-left:6px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.lang-switch button:hover{
+  background:#9b87f5;
+  color:black;
+}
+</style>
+</head>
+
+<body>
+
+<!-- BOTÓN IDIOMA -->
+<div class="lang-switch">
+  <button onclick="setLang('es')">ES</button>
+  <button onclick="setLang('en')">EN</button>
+</div>
+
+<section class="hero">
+  <h1 data-es="Soluciones Web para Creadoras Digitales"
+      data-en="Web Solutions for Digital Creators"></h1>
+
+  <p data-es="Ayudamos a modelos y creadoras a tener su propia página profesional, centralizar enlaces y vender su contenido de forma independiente."
+     data-en="We help models and creators build their own professional website, centralize links and sell content independently.">
+  </p>
+
+  <a class="btn"
+     href="https://wa.me/573183237308?text=Hola,%20vi%20tu%20página%20y%20me%20interesa%20una%20web"
+     target="_blank"
+     data-es="Contactar por WhatsApp"
+     data-en="Contact via WhatsApp">
+  </a>
+</section>
+
+<section class="container">
+  <h2 data-es="¿Qué hacemos?" data-en="What do we do?"></h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3 data-es="Páginas de enlaces" data-en="Link pages"></h3>
+      <p data-es="Centraliza todas tus redes, plataformas y contacto en un solo enlace."
+         data-en="Centralize all your platforms, socials and contact links in one place."></p>
+    </div>
+
+    <div class="card">
+      <h3 data-es="Página personal" data-en="Personal website"></h3>
+      <p data-es="Creamos tu sitio para promocionar y vender contenido digital."
+         data-en="We design your personal website to promote and sell digital content."></p>
+    </div>
+
+    <div class="card">
+      <h3 data-es="Asesoría independiente" data-en="Independent guidance"></h3>
+      <p data-es="Te orientamos para trabajar sin agencias ni intermediarios."
+         data-en="We guide you to work independently without agencies."></p>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <h2 data-es="Ejemplos de diseño" data-en="Design examples"></h2>
+
+  <p class="notice"
+     data-es="Los diseños son demostrativos. No solicitamos ni almacenamos contenido explícito."
+     data-en="Designs are demo only. We do not request or store explicit content.">
+  </p>
+
+  <div class="gallery">
+    <div class="mock"><img src="img1.png"></div>
+    <div class="mock"><img src="img2.png"></div>
+    <div class="mock"><img src="img3.png"></div>
+    <div class="mock"><img src="img4.png"></div>
+  </div>
+</section>
+
+<section class="container">
+  <h2 data-es="Importante" data-en="Important"></h2>
+  <div class="notice"
+       data-es="No solicitamos fotos ni videos explícitos. Todo el contenido es manejado por la creadora."
+       data-en="We do not request explicit photos or videos. All content is managed by the creator.">
+  </div>
+</section>
+
+<footer>
+  Servicio profesional • Confidencialidad garantizada • Trabajo digital
+</footer>
+
+<script>
+function setLang(lang){
+  document.querySelectorAll('[data-es]').forEach(el=>{
+    el.textContent = el.getAttribute('data-' + lang);
+  });
+}
+setLang('es');
+</script>
+
+</body>
+</html>
